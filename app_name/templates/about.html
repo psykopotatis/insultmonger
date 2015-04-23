@@ -13,6 +13,22 @@
 {% block content %}
     <div class="inner cover">
         <h1 class="cover-heading">Om sidan</h1>
-        <p class="lead">Här tänkte jag lägga in en Facebook Like-knapp kanske.</p>
+        <p class="lead">Klicka på Like och Share-knapparna för fan!</p>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="fb-like" data-href="https://www.facebook.com/pages/Insultmonger/996258980398941" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+            </div>
+        </div>
     </div>
+{% endblock %}
+
+{% block more-scripts %}
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=1504062436527456";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 {% endblock %}
